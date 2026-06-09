@@ -1,0 +1,4 @@
+/* App-specific overrides (kept minimal) */
+.App {
+    min-height: 100vh;
+}

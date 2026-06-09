@@ -1,0 +1,82 @@
+{
+  "theme": "Light",
+  "archetype": "Archetype 4: Swiss & High-Contrast",
+  "domain": "Finance, Banking, Enterprise SaaS",
+  "typography": {
+    "heading_font": "Chivo",
+    "body_font": "IBM Plex Sans",
+    "rules": [
+      "Use tracking-tight for headings above 32px",
+      "Avoid Inter, Syne, Roboto for headings",
+      "Overlines must be uppercase, tiny, wide spacing (tracking-[0.2em])",
+      "Max hero heading size: text-6xl. Use fluid scaling."
+    ]
+  },
+  "colors": {
+    "base": {
+      "background": "#FFFFFF",
+      "surface": "#F9FAFB",
+      "surface_alt": "#F3F4F6",
+      "border": "#E5E7EB"
+    },
+    "text": {
+      "primary": "#0A0A0A",
+      "secondary": "#4B5563",
+      "inverse": "#FFFFFF"
+    },
+    "risk_levels": {
+      "critical": "#E53E3E",
+      "high": "#D69E2E",
+      "moderate": "#002FA7",
+      "low": "#38A169"
+    },
+    "accent": "#002FA7",
+    "forbidden_colors": ["#1B93A4", "#9D4CDD", "#7351B7"]
+  },
+  "layout_spacing": {
+    "grid_strategy": "Control Room (Dense, rigid, highly functional)",
+    "spacing_scale": "p-4 to p-8 for containers. Tight gaps (gap-4) for data widgets.",
+    "border_radius": "Max 4px or rounded-sm to maintain technical rigidity. No pill shapes.",
+    "alignment": "Strict left-alignment for data and forms. Optical alignment over mathematical."
+  },
+  "surfaces_and_components": {
+    "dashboard_cards": "Grid Borders strategy. 1px solid border (border-border), zero shadow. On hover: -translate-y-1, subtle shadow-sm.",
+    "header": "Solid white background with hard 1px bottom border. No glassmorphism here for data fidelity.",
+    "buttons": "Sharp corners (rounded-sm), high contrast active states. Must have explicit focus/hover states.",
+    "data_visualization": "Recharts or Shadcn Charts. Use risk level colors for status. Provide clear tooltips without large shadows."
+  },
+  "motion": {
+    "hover_states": "Crisp, fast transitions. No sluggish animations.",
+    "page_transitions": "Minimal. Focus on data loading states (skeletons) rather than elaborate entry animations."
+  },
+  "accessibility": {
+    "contrast": "APCA/WCAG AA strictly enforced. Focus rings must be high contrast (ring-blue-600).",
+    "data_testid": "ALL interactive and key informational elements MUST include data-testid attribute in kebab-case."
+  },
+  "media": {
+    "image_urls": [
+      {
+        "url": "https://images.pexels.com/photos/358549/pexels-photo-358549.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Modern skyscrapers against blue sky",
+        "category": "hero_background"
+      },
+      {
+        "url": "https://images.pexels.com/photos/6950031/pexels-photo-6950031.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Diverse business professionals discussing strategy",
+        "category": "testimonial_or_about"
+      }
+    ],
+    "icons": {
+      "library": "@phosphor-icons/react",
+      "installation": "yarn add @phosphor-icons/react",
+      "rationale": "Perfect for dense dashboards and developer/finance tools."
+    }
+  },
+  "instructions_to_main_agent": [
+    "Strictly follow the color palette. Do NOT introduce teal or purple.",
+    "Use pure HTML/Tailwind for Landing Page. Use Shadcn components heavily customized for the Dashboard.",
+    "Implement 'Grid Borders' look for dashboard widgets: flat, rigid, defined by 1px borders.",
+    "Do NOT use 'Inter' for headings. Stick to Chivo.",
+    "Ensure all buttons, inputs, and key data points have appropriate `data-testid` attributes."
+  ]
+}
